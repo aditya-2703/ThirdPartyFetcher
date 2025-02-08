@@ -1,0 +1,47 @@
+
+# application.yml
+spring:
+  application:
+    name: ThirdPartyFetcher
+  datasource:
+    username: root
+    password: admin
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:1433/idea_bazaar
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+  # JPA Configuration
+
+
+  # Redis Configuration
+  data:
+    redis:
+      host: hostname
+      timeout: 2000
+      username: default
+      password: hostpassword
+      port: 14029
+
+# GitHub Configuration
+github:
+  api:
+    token: githubtoken
+  cache:
+    expiration-hours: 24
+
+# Logging Configuration
+logging:
+  level:
+    com.example: DEBUG
+    org.hibernate.SQL: DEBUG
+
+# application.yml
+
+server:
+  port: 9090
